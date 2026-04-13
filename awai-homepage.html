@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>あわい - 公式サイト</title>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700;800&display=swap" rel="stylesheet">
+   
+   
+   
+   <style>
+        body {
+            margin: 0;
+            font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+            background: #fff7f7;
+            color: #333;
+        }
+
+        /* ▼▼ ハンバーガーメニュー ▼▼ */
+        .menu-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            font-size: 28px;
+            cursor: pointer;
+            color: #b85c5c;
+            background: rgba(255,255,255,0.7);
+            padding: 8px 12px;
+            border-radius: 6px;
+            backdrop-filter: blur(4px);
+        }
+
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -260px;
+            width: 240px;
+            height: 100%;
+            background: #fff0f0;
+            box-shadow: 4px 0 12px rgba(0,0,0,0.1);
+            padding: 30px 20px;
+            transition: left 0.4s ease;
+            z-index: 999;
+        }
+
+        .side-menu.open {
+            left: 0;
+        }
+
+        .side-menu h3 {
+            color: #b85c5c;
+            margin-top: 0;
+        }
+
+        .side-menu a {
+            display: block;
+            margin: 12px 0;
+            color: #b85c5c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .side-menu .contact {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #b85c5c;
+        }
+
+        /* ▼▼ ヒーローセクション ▼▼ */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 90vh;
+            background: url('team.jpg') center 40%/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 230, 230, 0.55);
+        }
+
+        .hero-text {
+            position: relative;
+            text-align: center;
+        }
+
+        @font-face {
+    font-family: 'KoudanGothic';
+    src: url('koudan.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+        }
+
+#activity-content {
+    display: none;
+        }
+
+
+        /* ▼▼ ロゴ ▼▼ */
+        .hero-text h1 {
+    font-family: 'KoudanGothic', sans-serif;
+    font-weight: normal;
+    font-size: 4.2rem;
+    letter-spacing: 0.12em;
+    color: rgba(184, 92, 92, 0.95);
+    text-shadow: 0 6px 20px rgba(255, 200, 200, 0.55);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: rgba(184, 92, 92, 0.85);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        /* ▼▼ ナビ ▼▼ */
+        nav {
+            background: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 1px solid #f0caca;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #b85c5c;
+            font-weight: bold;
+        }
+
+        /* ▼▼ コンテンツ ▼▼ */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #b85c5c;
+            border-left: 6px solid #f2bcbc;
+            padding-left: 10px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid #f0caca;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f7dede;
+            margin-top: 40px;
+            color: #b85c5c;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ▼▼ ハンバーガーメニュー ▼▼ -->
+<div class="menu-btn">≡</div>
+
+<div class="side-menu" id="sideMenu">
+    <h3>メニュー</h3>
+    <a href="#news">ニュース</a>
+    <a href="#info">お知らせ</a>
+    <a href="#activity">活動</a>
+
+    <div class="contact">
+        <p><strong>お問い合わせ</strong></p>
+        <p>Awai.movie2025@gmail.com</p>
+    </div>
+</div>
+
+<!-- ▼▼ ヒーロー ▼▼ -->
+<div class="hero">
+    <div class="hero-text">
+        <h1>あわい</h1>
+        <p>人科映像製作チーム</p>
+    </div>
+</div>
+
+<nav>
+    <a href="#news">ニュース</a>
+    <a href="#info">お知らせ</a>
+    <a href="#activity">活動</a>
+</nav>
+
+<div class="container">
+
+    <!-- ニュース -->
+    <section id="news">
+        <h2>ニュース</h2>
+        <div class="card">
+            <p>現在、ニュースはありません。</p>
+        </div>
+    </section>
+
+    <!-- お知らせ -->
+    <section id="info">
+        <h2>お知らせ</h2>
+        <div class="card">
+            <p>現在、お知らせはありません。</p>
+        </div>
+    </section>
+
+    <!-- 活動 -->
+    <section id="activity">
+    <h2>活動</h2>
+
+    <button id="toggle-activity" style="
+        background:#f7dede;
+        border:1px solid #f0caca;
+        padding:10px 20px;
+        border-radius:6px;
+        color:#b85c5c;
+        font-weight:bold;
+        cursor:pointer;
+        margin-bottom:15px;
+    ">▼ 活動内容を表示</button>
+
+    <div id="activity-content">
+
+        <div class="card">
+    <h3>2026/3/26　合宿二日目</h3>
+    <img src="camp2.jpg" alt="映像制作合宿の写真" style="margin-bottom:15px;">
+    <p>
+        人科棟に行き、ロケハンを行いました。<br>
+        特に CiBER の空間が美しすぎて、<br>
+        ここを作品づくりに有効活用することを決意しました。
+    </p>
+</div>
+        <!-- ここに今の活動カードを全部入れる -->
+        <div class="card">
+            <h3>2026/3/25　映像制作合宿を行いました</h3>
+            <img src="camp.jpg"  style="margin-bottom:15px;">
+            <p>
+                あわいのメンバーで映像制作合宿を実施しました。<br>
+                いちごチョコがとてもおいしかったので集中して作業に取り組みました。
+            </p>
+        </div>
+
+        <div class="card">
+            <p>その他の活動内容は準備中です。</p>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<footer>
+    © 2026 あわい
+</footer>
+
+<!-- ▼▼ スクロールでヒーローとロゴが消える＋メニュー操作 ▼▼ -->
+<script>
+    // スクロールでヒーロー消える
+    window.addEventListener('scroll', () => {
+        const hero = document.querySelector('.hero');
+        const h1 = document.querySelector('.hero-text h1');
+        const p = document.querySelector('.hero-text p');
+        const scrollY = window.scrollY;
+
+        if (scrollY > 50) {
+            hero.style.opacity = '0';
+            h1.style.opacity = '0';
+            h1.style.transform = 'translateY(-20px)';
+            p.style.opacity = '0';
+            p.style.transform = 'translateY(-20px)';
+        } else {
+            hero.style.opacity = '1';
+            h1.style.opacity = '1';
+            h1.style.transform = 'translateY(0)';
+            p.style.opacity = '1';
+            p.style.transform = 'translateY(0)';
+        }
+    });
+
+    // メニュー開閉
+    const menuBtn = document.querySelector('.menu-btn');
+    const sideMenu = document.getElementById('sideMenu');
+
+    menuBtn.addEventListener('click', () => {
+        sideMenu.classList.toggle('open');
+    });
+
+    
+    const toggleBtn = document.getElementById('toggle-activity');
+    const activityContent = document.getElementById('activity-content');
+
+    toggleBtn.addEventListener('click', () => {
+        if (activityContent.style.display === 'none') {
+            activityContent.style.display = 'block';
+            toggleBtn.textContent = '▲ 活動内容を隠す';
+        } else {
+            activityContent.style.display = 'none';
+            toggleBtn.textContent = '▼ 活動内容を表示';
+        }
+    });
+</script>
+</script>
+
+</body>
+</html>
